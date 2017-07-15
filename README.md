@@ -13,4 +13,11 @@ touch webpack.config.js
 
 ```sh
 webpack
+npm run build
+```
+
+# Watch
+
+```sh
+npm run watch
 ```
