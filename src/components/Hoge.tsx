@@ -1,5 +1,19 @@
 import * as React from "react";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 
-export interface Hoge {}
-
-export const Hoge = (props: Hoge) => <h1> Hello hogege!!! </h1>
+export class Hoge extends React.Component {
+  render() {
+    return (
+      <MuiThemeProvider>
+        <Card>
+          <CardHeader
+            title="Hogeggege!!!"
+            subtitle="Welocome to Hoge world!!!"
+          />
+        </Card>
+      </MuiThemeProvider>
+    );
+  }
+}
