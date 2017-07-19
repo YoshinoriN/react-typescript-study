@@ -9,6 +9,14 @@ touch tsconfig.json
 touch webpack.config.js
 ```
 
+# Material UI
+
+```sh
+npm install -S material-ui@next
+npm install -S material-ui-icons
+```
+
+
 # Transpile
 
 ```sh
