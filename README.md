@@ -12,8 +12,9 @@ touch webpack.config.js
 # Material UI
 
 ```sh
-npm install -S material-ui@next
-npm install -S material-ui-icons
+npm install --save material-ui
+npm install --save-dev @types/material-ui
+npm install --save react-tap-event-plugin
 ```
 
 
