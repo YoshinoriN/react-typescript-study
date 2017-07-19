@@ -1,6 +1,9 @@
 /* reactとreact-domの読み込み */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TextField from 'material-ui/TextField';
+import FlatButton from 'material-ui/FlatButton';
 
 /* アプリ本体となる「TextBoxコンポーネント」 */
 interface TextBoxProps {
@@ -33,11 +36,14 @@ export class TextBox extends React.Component<TextBoxProps, TextBoxState> {
   }
   render() {
     return (
+      <MuiThemeProvider>
       <div>
+        <br/>
         <Input value={this.state.inputValue} handleChange={this.handleChange} />
         <Button handleClick={this.handleClick} />
         <Output hello="Hello" value={this.state.outputValue} />
       </div>
+      </MuiThemeProvider>
     );
   }
 }
@@ -49,7 +55,7 @@ interface InputProps {
 }
 const Input: React.StatelessComponent<InputProps> = (props) => {
   return (
-    <input type="text" placeholder="Input Name" value={props.value} onChange={props.handleChange} />
+    <TextField type="text" hintText="Please input something..." value={props.value} onChange={props.handleChange} />
   );
 }
 
@@ -59,7 +65,7 @@ interface ButtonProps {
 }
 const Button: React.StatelessComponent<ButtonProps> = (props) => {
   return (
-    <button onClick={props.handleClick}>Send</button>
+    <FlatButton secondary={true} onClick={props.handleClick}>Display</FlatButton>
   );
 }
 
